@@ -1,0 +1,20 @@
+ {
+	"manifest_version": 2,
+	"name": "Twitch Sells Games",
+	"version": "0.1",
+	"description": "A chrome extention that gives Twitch viewers easy access to the games they watch",
+	"icons": { "16": "twitch_16.png",
+           "48": "twitch_48.png",
+          "128": "twitch_128.png" },  
+	"permissions": [
+		"tabs"
+	],
+	
+	"content_scripts":[
+		{
+			"matches": ["https://*.twitch.tv/*"],
+			"js": ["jquery-3.2.1.slim.min.js", "script.js"],
+			"run_at": "document_end"
+		}
+	]
+ }
